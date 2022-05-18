@@ -40,6 +40,17 @@ private:
 	CString T50,T51,T52,T53,T54,T55,T56,T57;//48
 	CString T60,T61,T62,T63,T64,T65,T66,T67;//56
 	CString T70,T71,T72,T73,T74,T75,T76,T77;//64
+
+	CString B00, B01, B02, B03, B04, B05, B06, B07;//8
+	CString B10, B11, B12, B13, B14, B15, B16, B17;//16
+	CString B20, B21, B22, B23, B24, B25, B26, B27;//24
+	CString B30, B31, B32, B33, B34, B35, B36, B37;//32
+	CString B40, B41, B42, B43, B44, B45, B46, B47;//40
+	CString B50, B51, B52, B53, B54, B55, B56, B57;//48
+	CString B60, B61, B62, B63, B64, B65, B66, B67;//56
+	CString B70, B71, B72, B73, B74, B75, B76, B77;//64
+
+	CString B[8][8];
 	int tabp1[8][8];
 	int tabb1[8][8];
 	Game P1;
@@ -51,6 +62,7 @@ public:
 	afx_msg void OnBnClickedOk();
 	void setresult(int x,int y);
 	void show();
+	void attack(int x, int y);
 	afx_msg void OnBnClickedButton3();
 	afx_msg void OnBnClickedButton1();
 	afx_msg void OnBnClickedButton2();

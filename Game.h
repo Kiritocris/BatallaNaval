@@ -19,8 +19,9 @@ public:
 	void settbl();
 	bool valide(int x, int y, int h, int cont, int opc);
 	void showtab();
+	void setnew(int x, int y);
 	void cont();
 	int contdev();
-	int result();
 	int tab(int x, int y);
+	int randompick(int x);
 };

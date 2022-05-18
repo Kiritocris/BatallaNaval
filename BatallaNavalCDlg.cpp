@@ -138,6 +138,72 @@ void CBatallaNavalCDlg::DoDataExchange(CDataExchange* pDX)
 	DDX_Text(pDX, IDC_EDIT107, T76);
 	DDX_Text(pDX, IDC_EDIT123, T77);
 
+	DDX_Text(pDX, IDC_EDIT50, B[0][0]);
+	DDX_Text(pDX, IDC_EDIT51, B[0][1]);
+	DDX_Text(pDX, IDC_EDIT52, B[0][2]);
+	DDX_Text(pDX, IDC_EDIT53, B[0][3]);
+	DDX_Text(pDX, IDC_EDIT54, B[0][4]);
+	DDX_Text(pDX, IDC_EDIT55, B[0][5]);
+	DDX_Text(pDX, IDC_EDIT56, B[0][6]);
+	DDX_Text(pDX, IDC_EDIT124, B[0][7]);
+	DDX_Text(pDX, IDC_EDIT57, B[1][0]);
+	DDX_Text(pDX, IDC_EDIT58, B[1][1]);
+	DDX_Text(pDX, IDC_EDIT59, B[1][2]);
+	DDX_Text(pDX, IDC_EDIT60, B[1][3]);
+	DDX_Text(pDX, IDC_EDIT61, B[1][4]);
+	DDX_Text(pDX, IDC_EDIT62, B[1][5]);
+	DDX_Text(pDX, IDC_EDIT63, B[1][6]);
+	DDX_Text(pDX, IDC_EDIT125, B[1][7]);
+	DDX_Text(pDX, IDC_EDIT64, B[2][0]);
+	DDX_Text(pDX, IDC_EDIT65, B[2][1]);
+	DDX_Text(pDX, IDC_EDIT66, B[2][2]);
+	DDX_Text(pDX, IDC_EDIT67, B[2][3]);
+	DDX_Text(pDX, IDC_EDIT68, B[2][4]);
+	DDX_Text(pDX, IDC_EDIT69, B[2][5]);
+	DDX_Text(pDX, IDC_EDIT70, B[2][6]);
+	DDX_Text(pDX, IDC_EDIT126, B[2][7]);
+	DDX_Text(pDX, IDC_EDIT71, B[3][0]);
+	DDX_Text(pDX, IDC_EDIT72, B[3][1]);
+	DDX_Text(pDX, IDC_EDIT73, B[3][2]);
+	DDX_Text(pDX, IDC_EDIT74, B[3][3]);
+	DDX_Text(pDX, IDC_EDIT75, B[3][4]);
+	DDX_Text(pDX, IDC_EDIT76, B[3][5]);
+	DDX_Text(pDX, IDC_EDIT77, B[3][6]);
+	DDX_Text(pDX, IDC_EDIT127, B[3][7]);
+	DDX_Text(pDX, IDC_EDIT78, B[4][0]);
+	DDX_Text(pDX, IDC_EDIT79, B[4][1]);
+	DDX_Text(pDX, IDC_EDIT80, B[4][2]);
+	DDX_Text(pDX, IDC_EDIT81, B[4][3]);
+	DDX_Text(pDX, IDC_EDIT82, B[4][4]);
+	DDX_Text(pDX, IDC_EDIT83, B[4][5]);
+	DDX_Text(pDX, IDC_EDIT84, B[4][6]);
+	DDX_Text(pDX, IDC_EDIT128, B[4][7]);
+	DDX_Text(pDX, IDC_EDIT85, B[5][0]);
+	DDX_Text(pDX, IDC_EDIT86, B[5][1]);
+	DDX_Text(pDX, IDC_EDIT87, B[5][2]);
+	DDX_Text(pDX, IDC_EDIT88, B[5][3]);
+	DDX_Text(pDX, IDC_EDIT89, B[5][4]);
+	DDX_Text(pDX, IDC_EDIT90, B[5][5]);
+	DDX_Text(pDX, IDC_EDIT91, B[5][6]);
+	DDX_Text(pDX, IDC_EDIT129, B[5][7]);
+	DDX_Text(pDX, IDC_EDIT92, B[6][0]);
+	DDX_Text(pDX, IDC_EDIT93, B[6][1]);
+	DDX_Text(pDX, IDC_EDIT94, B[6][2]);
+	DDX_Text(pDX, IDC_EDIT95, B[6][3]);
+	DDX_Text(pDX, IDC_EDIT96, B[6][4]);
+	DDX_Text(pDX, IDC_EDIT97, B[6][5]);
+	DDX_Text(pDX, IDC_EDIT98, B[6][6]);
+	DDX_Text(pDX, IDC_EDIT130, B[6][7]);
+	DDX_Text(pDX, IDC_EDIT108, B[7][0]);
+	DDX_Text(pDX, IDC_EDIT109, B[7][1]);
+	DDX_Text(pDX, IDC_EDIT110, B[7][2]);
+	DDX_Text(pDX, IDC_EDIT111, B[7][3]);
+	DDX_Text(pDX, IDC_EDIT112, B[7][4]);
+	DDX_Text(pDX, IDC_EDIT113, B[7][5]);
+	DDX_Text(pDX, IDC_EDIT114, B[7][6]);
+	DDX_Text(pDX, IDC_EDIT131, B[7][7]);
+	
+
 
 
 
@@ -311,7 +377,6 @@ HCURSOR CBatallaNavalCDlg::OnQueryDragIcon()
 
 void CBatallaNavalCDlg::OnBnClickedOk()
 {
-
 	UpdateData();
 	int i = 0;
 	P1.initab();
@@ -334,12 +399,12 @@ void CBatallaNavalCDlg::OnBnClickedOk()
 	}
 	i = 60;
 	Inicializador.SetPos(i);
-	for (int i = 0; i < 3; i++) {
+	for (int i = 0; i < 2; i++) {
 		B1.settbm();
 	}
 	i = 80;
 	Inicializador.SetPos(i);
-	for (int i = 0; i < 1; i++) {
+	for (int i = 0; i < 4; i++) {
 		B1.settbs();
 	}
 
@@ -347,6 +412,7 @@ void CBatallaNavalCDlg::OnBnClickedOk()
 	if (Name == "") {
 		Name = _T("Player 1");
 	}
+	show();
 	i = 100;
 	Inicializador.SetPos(i);
 	UpdateData(false);
@@ -369,16 +435,9 @@ void CBatallaNavalCDlg::OnBnClickedButton3()
 		Estado = "No acertaste planea tu estrategia";
 	}
 
-	int num;
-	srand(time(NULL));
-	num = rand() % (8);
-
-	int num2;
-	srand(time(NULL));
-	num2 = rand() % (8);
-
-	int i = num;
-	int j = num2;
+	int i = P1.randompick(posx);
+	int j = B1.randompick(posy);
+	attack(i, j);
 	if (P1.tab(i, j) == 1) {
 		P1.cont();
 	}
@@ -391,8 +450,10 @@ void CBatallaNavalCDlg::OnBnClickedButton3()
 		GetDlgItem(IDOK)->EnableWindow(FALSE);
 		Winner = _T("Ganaste");
 	}
-	else if (P1.contdev() == 12) {
+	else if (P1.contdev() == 22) {
 		GetDlgItem(IDC_EDIT132)->ShowWindow(SW_SHOW);
+		GetDlgItem(IDC_BUTTON3)->EnableWindow(FALSE);
+		GetDlgItem(IDOK)->EnableWindow(FALSE);
 		Winner = _T("Perdiste");
 	}
 		
@@ -1311,850 +1372,30 @@ void CBatallaNavalCDlg::setresult(int x, int y) {
 
 void CBatallaNavalCDlg::show() {
 	UpdateData();
-	for (int x = 0; x < 8; x++) {
-		for (int y = 0; y < 8; y++) {
-			switch (x)
-			{
-			case 0:
-				switch (y)
-				{
-				case 0:
-					if (B1.tab(x, y) == 1) {
-						T00 = _T("X");
-						B1.cont();
-					}
-					else if (B1.tab(x, y) == 0) {
-						T00 = _T("///");
-					}
-					break;
-				case 1:
-					if (B1.tab(x, y) == 0) {
-						T01 = _T("///");
-					}
-					else if (B1.tab(x, y) == 1) {
-						T01 = _T("X");
-						B1.cont();
-					}
-					break;
-				case 2:
-					if (B1.tab(x, y) == 0) {
-						T02 = _T("///");
-					}
-					else if (B1.tab(x, y) == 1) {
-						T02 = _T("X");
-						B1.cont();
-					}
-					break;
-				case 3:
-					if (B1.tab(x, y) == 0) {
-						T03 = _T("///");
-					}
-					else if (B1.tab(x, y) == 1) {
-						T03 = _T("X");
-						B1.cont();
-					}
-					break;
-				case 4:
-					if (B1.tab(x, y) == 0) {
-						T04 = _T("///");
-					}
-					else if (B1.tab(x, y) == 1) {
-						T04 = _T("X");
-						B1.cont();
-					}
-					break;
-				case 5:
-					if (B1.tab(x, y) == 0) {
-						T05 = _T("///");
-					}
-					else if (B1.tab(x, y) == 1) {
-						T05 = _T("X");
-						B1.cont();
-					}
-					break;
-				case 6:
-					if (B1.tab(x, y) == 0) {
-						T06 = _T("///");
-					}
-					else if (B1.tab(x, y) == 1) {
-						T06 = _T("X");
-						B1.cont();
-					}
-					break;
-				case 7:
-					if (B1.tab(x, y) == 0) {
-						T07 = _T("///");
-					}
-					else if (B1.tab(x, y) == 1) {
-						T07 = _T("X");
-						B1.cont();
-					}
-					break;
-				default:
-					break;
-				}
-				break;
-			case 1:
-				switch (y)
-				{
-				case 0:
-					if (B1.tab(x, y) == 0) {
-						T10 = _T("///");
-					}
-					else if (B1.tab(x, y) == 1) {
-						T10 = _T("X");
-						B1.cont();
-					}
-
-					break;
-				case 1:
-					if (B1.tab(x, y) == 0) {
-						T11 = _T("///");
-					}
-					else if (B1.tab(x, y) == 1) {
-						T11 = _T("X");
-						B1.cont();
-					}
-					break;
-				case 2:
-					if (B1.tab(x, y) == 0) {
-						T12 = _T("///");
-					}
-					else if (B1.tab(x, y) == 1) {
-						T12 = _T("X");
-						B1.cont();
-					}
-					break;
-				case 3:
-					if (B1.tab(x, y) == 0) {
-						T13 = _T("///");
-					}
-					else if (B1.tab(x, y) == 1) {
-						T13 = _T("X");
-						B1.cont();
-					}
-					break;
-				case 4:
-					if (B1.tab(x, y) == 0) {
-						T14 = _T("///");
-					}
-					else if (B1.tab(x, y) == 1) {
-						T14 = _T("X");
-						B1.cont();
-					}
-					break;
-				case 5:
-					if (B1.tab(x, y) == 0) {
-						T15 = _T("///");
-					}
-					else if (B1.tab(x, y) == 1) {
-						T15 = _T("X");
-						B1.cont();
-					}
-					break;
-				case 6:
-					if (B1.tab(x, y) == 0) {
-						T16 = _T("///");
-					}
-					else if (B1.tab(x, y) == 1) {
-						T16 = _T("X");
-						B1.cont();
-					}
-					break;
-				case 7:
-					if (B1.tab(x, y) == 0) {
-						T17 = _T("///");
-					}
-					else if (B1.tab(x, y) == 1) {
-						T17 = _T("X");
-						B1.cont();
-					}
-					break;
-				default:
-					break;
-				}
-				break;
-			case 2:
-				switch (y)
-				{
-				case 0:
-
-					if (B1.tab(x, y) == 0) {
-						T20 = _T("///");
-					}
-					else if (B1.tab(x, y) == 1) {
-						T20 = _T("X");
-						B1.cont();
-					}
-
-
-					break;
-				case 1:
-					
-					
-
-
-					if (B1.tab(x, y) == 0) {
-						T21 = _T("///");
-					}
-					else if (B1.tab(x, y) == 1) {
-						T21 = _T("X");
-						B1.cont();
-					}
-					break;
-				case 2:
-					
-					////(IDC_BUTTON20)->ShowWindow(SW_HIDE);
-
-
-					if (B1.tab(x, y) == 0) {
-						T22 = _T("///");
-					}
-					else if (B1.tab(x, y) == 1) {
-						T22 = _T("X");
-						B1.cont();
-					}
-					break;
-				case 3:
-					//(IDC_EDIT18)->ShowWindow(SW_SHOW);
-					//(IDC_BUTTON21)->ShowWindow(SW_HIDE);
-
-
-					if (B1.tab(x, y) == 0) {
-						T23 = _T("///");
-					}
-					else if (B1.tab(x, y) == 1) {
-						T23 = _T("X");
-						B1.cont();
-					}
-					break;
-				case 4:
-					//(IDC_EDIT19)->ShowWindow(SW_SHOW);
-					//(IDC_BUTTON22)->ShowWindow(SW_HIDE);
-
-
-					if (B1.tab(x, y) == 0) {
-						T24 = _T("///");
-					}
-					else if (B1.tab(x, y) == 1) {
-						T24 = _T("X");
-						B1.cont();
-					}
-					break;
-				case 5:
-					//(IDC_EDIT20)->ShowWindow(SW_SHOW);
-					//(IDC_BUTTON23)->ShowWindow(SW_HIDE);
-
-
-					if (B1.tab(x, y) == 0) {
-						T25 = _T("///");
-					}
-					else if (B1.tab(x, y) == 1) {
-						T25 = _T("X");
-						B1.cont();
-					}
-					break;
-				case 6:
-					//(IDC_EDIT21)->ShowWindow(SW_SHOW);
-					//(IDC_BUTTON24)->ShowWindow(SW_HIDE);
-
-
-					if (B1.tab(x, y) == 0) {
-						T26 = _T("///");
-					}
-					else if (B1.tab(x, y) == 1) {
-						T26 = _T("X");
-						B1.cont();
-					}
-					break;
-				case 7:
-					//(IDC_EDIT118)->ShowWindow(SW_SHOW);
-					//(IDC_BUTTON25)->ShowWindow(SW_HIDE);
-
-
-					if (B1.tab(x, y) == 0) {
-						T27 = _T("///");
-					}
-					else if (B1.tab(x, y) == 1) {
-						T27 = _T("X");
-						B1.cont();
-					}
-					break;
-				default:
-					break;
-				}
-				break;
-			case 3:
-				switch (y)
-				{
-				case 0:
-
-					//(IDC_EDIT22)->ShowWindow(SW_SHOW);
-					//(IDC_BUTTON26)->ShowWindow(SW_HIDE);
-
-
-					if (B1.tab(x, y) == 0) {
-						T30 = _T("///");
-					}
-					else if (B1.tab(x, y) == 1) {
-						T30 = _T("X");
-						B1.cont();
-					}
-
-
-					break;
-				case 1:
-					//(IDC_EDIT23)->ShowWindow(SW_SHOW);
-					//(IDC_BUTTON27)->ShowWindow(SW_HIDE);
-
-
-					if (B1.tab(x, y) == 0) {
-						T31 = _T("///");
-					}
-					else if (B1.tab(x, y) == 1) {
-						T31 = _T("X");
-						B1.cont();
-					}
-					break;
-				case 2:
-					//(IDC_EDIT24)->ShowWindow(SW_SHOW);
-					//(IDC_BUTTON28)->ShowWindow(SW_HIDE);
-
-
-					if (B1.tab(x, y) == 0) {
-						T32 = _T("///");
-					}
-					else if (B1.tab(x, y) == 1) {
-						T32 = _T("X");
-						B1.cont();
-					}
-					break;
-				case 3:
-					//(IDC_EDIT25)->ShowWindow(SW_SHOW);
-					//(IDC_BUTTON29)->ShowWindow(SW_HIDE);
-
-
-					if (B1.tab(x, y) == 0) {
-						T33 = _T("///");
-					}
-					else if (B1.tab(x, y) == 1) {
-						T33 = _T("X");
-						B1.cont();
-					}
-					break;
-				case 4:
-					//(IDC_EDIT26)->ShowWindow(SW_SHOW);
-					//(IDC_BUTTON30)->ShowWindow(SW_HIDE);
-
-
-					if (B1.tab(x, y) == 0) {
-						T34 = _T("///");
-					}
-					else if (B1.tab(x, y) == 1) {
-						T34 = _T("X");
-						B1.cont();
-					}
-					break;
-				case 5:
-					//(IDC_EDIT27)->ShowWindow(SW_SHOW);
-					//(IDC_BUTTON31)->ShowWindow(SW_HIDE);
-
-
-					if (B1.tab(x, y) == 0) {
-						T35 = _T("///");
-					}
-					else if (B1.tab(x, y) == 1) {
-						T35 = _T("X");
-						B1.cont();
-					}
-					break;
-				case 6:
-					//(IDC_EDIT28)->ShowWindow(SW_SHOW);
-					//(IDC_BUTTON32)->ShowWindow(SW_HIDE);
-
-
-					if (B1.tab(x, y) == 0) {
-						T36 = _T("///");
-					}
-					else if (B1.tab(x, y) == 1) {
-						T36 = _T("X");
-						B1.cont();
-					}
-					break;
-				case 7:
-					//(IDC_EDIT119)->ShowWindow(SW_SHOW);
-					//(IDC_BUTTON33)->ShowWindow(SW_HIDE);
-
-
-					if (B1.tab(x, y) == 0) {
-						T37 = _T("///");
-					}
-					else if (B1.tab(x, y) == 1) {
-						T37 = _T("X");
-						B1.cont();
-					}
-					break;
-				default:
-					break;
-				}
-				break;
-			case 4:
-				switch (y)
-				{
-				case 0:
-
-					//(IDC_EDIT29)->ShowWindow(SW_SHOW);
-					//(IDC_BUTTON34)->ShowWindow(SW_HIDE);
-
-
-					if (B1.tab(x, y) == 0) {
-						T40 = _T("///");
-					}
-					else if (B1.tab(x, y) == 1) {
-						T40 = _T("X");
-						B1.cont();
-					}
-
-					break;
-				case 1:
-					//(IDC_EDIT30)->ShowWindow(SW_SHOW);
-					//(IDC_BUTTON35)->ShowWindow(SW_HIDE);
-
-
-					if (B1.tab(x, y) == 0) {
-						T41 = _T("///");
-					}
-					else if (B1.tab(x, y) == 1) {
-						T41 = _T("X");
-						B1.cont();
-					}
-					break;
-				case 2:
-					//(IDC_EDIT31)->ShowWindow(SW_SHOW);
-					//(IDC_BUTTON36)->ShowWindow(SW_HIDE);
-
-
-					if (B1.tab(x, y) == 0) {
-						T42 = _T("///");
-					}
-					else if (B1.tab(x, y) == 1) {
-						T42 = _T("X");
-						B1.cont();
-					}
-					break;
-				case 3:
-					//(IDC_EDIT32)->ShowWindow(SW_SHOW);
-					//(IDC_BUTTON37)->ShowWindow(SW_HIDE);
-
-
-					if (B1.tab(x, y) == 0) {
-						T43 = _T("///");
-					}
-					else if (B1.tab(x, y) == 1) {
-						T43 = _T("X");
-						B1.cont();
-					}
-					break;
-				case 4:
-					//(IDC_EDIT33)->ShowWindow(SW_SHOW);
-					//(IDC_BUTTON38)->ShowWindow(SW_HIDE);
-
-
-					if (B1.tab(x, y) == 0) {
-						T44 = _T("///");
-					}
-					else if (B1.tab(x, y) == 1) {
-						T44 = _T("X");
-						B1.cont();
-					}
-					break;
-				case 5:
-					//(IDC_EDIT34)->ShowWindow(SW_SHOW);
-					//(IDC_BUTTON39)->ShowWindow(SW_HIDE);
-
-
-					if (B1.tab(x, y) == 0) {
-						T45 = _T("///");
-					}
-					else if (B1.tab(x, y) == 1) {
-						T45 = _T("X");
-						B1.cont();
-					}
-					break;
-				case 6:
-					//(IDC_EDIT35)->ShowWindow(SW_SHOW);
-					//(IDC_BUTTON40)->ShowWindow(SW_HIDE);
-
-
-					if (B1.tab(x, y) == 0) {
-						T46 = _T("///");
-					}
-					else if (B1.tab(x, y) == 1) {
-						T46 = _T("X");
-						B1.cont();
-					}
-					break;
-				case 7:
-					//(IDC_EDIT120)->ShowWindow(SW_SHOW);
-					//(IDC_BUTTON41)->ShowWindow(SW_HIDE);
-
-
-					if (B1.tab(x, y) == 0) {
-						T47 = _T("///");
-					}
-					else if (B1.tab(x, y) == 1) {
-						T47 = _T("X");
-						B1.cont();
-					}
-					break;
-				default:
-					break;
-				}
-				break;
-			case 5:
-				switch (y)
-				{
-				case 0:
-
-					//(IDC_EDIT36)->ShowWindow(SW_SHOW);
-					//(IDC_BUTTON42)->ShowWindow(SW_HIDE);
-
-
-					if (B1.tab(x, y) == 0) {
-						T50 = _T("///");
-					}
-					else if (B1.tab(x, y) == 1) {
-						T50 = _T("X");
-						B1.cont();
-					}
-
-					break;
-				case 1:
-					//(IDC_EDIT37)->ShowWindow(SW_SHOW);
-					//(IDC_BUTTON43)->ShowWindow(SW_HIDE);
-
-
-					if (B1.tab(x, y) == 0) {
-						T51 = _T("///");
-					}
-					else if (B1.tab(x, y) == 1) {
-						T51 = _T("X");
-						B1.cont();
-					}
-					break;
-				case 2:
-					//(IDC_EDIT38)->ShowWindow(SW_SHOW);
-					//(IDC_BUTTON44)->ShowWindow(SW_HIDE);
-
-
-					if (B1.tab(x, y) == 0) {
-						T52 = _T("///");
-					}
-					else if (B1.tab(x, y) == 1) {
-						T52 = _T("X");
-						B1.cont();
-					}
-					break;
-				case 3:
-					//(IDC_EDIT39)->ShowWindow(SW_SHOW);
-					//(IDC_BUTTON45)->ShowWindow(SW_HIDE);
-
-
-					if (B1.tab(x, y) == 0) {
-						T53 = _T("///");
-					}
-					else if (B1.tab(x, y) == 1) {
-						T53 = _T("X");
-						B1.cont();
-					}
-					break;
-				case 4:
-					//(IDC_EDIT40)->ShowWindow(SW_SHOW);
-					//(IDC_BUTTON46)->ShowWindow(SW_HIDE);
-
-
-					if (B1.tab(x, y) == 0) {
-						T54 = _T("///");
-					}
-					else if (B1.tab(x, y) == 1) {
-						T54 = _T("X");
-						B1.cont();
-					}
-					break;
-				case 5:
-					//(IDC_EDIT41)->ShowWindow(SW_SHOW);
-					//(IDC_BUTTON47)->ShowWindow(SW_HIDE);
-
-
-					if (B1.tab(x, y) == 0) {
-						T55 = _T("///");
-					}
-					else if (B1.tab(x, y) == 1) {
-						T55 = _T("X");
-						B1.cont();
-					}
-					break;
-				case 6:
-					//(IDC_EDIT42)->ShowWindow(SW_SHOW);
-					//(IDC_BUTTON48)->ShowWindow(SW_HIDE);
-
-
-					if (B1.tab(x, y) == 0) {
-						T56 = _T("///");
-					}
-					else if (B1.tab(x, y) == 1) {
-						T56 = _T("X");
-						B1.cont();
-					}
-					break;
-				case 7:
-					//(IDC_EDIT121)->ShowWindow(SW_SHOW);
-					//(IDC_BUTTON49)->ShowWindow(SW_HIDE);
-
-
-					if (B1.tab(x, y) == 0) {
-						T57 = _T("///");
-					}
-					else if (B1.tab(x, y) == 1) {
-						T57 = _T("X");
-						B1.cont();
-					}
-					break;
-				default:
-					break;
-				}
-				break;
-			case 6:
-				switch (y)
-				{
-				case 0:
-
-					//(IDC_EDIT43)->ShowWindow(SW_SHOW);
-					//(IDC_BUTTON50)->ShowWindow(SW_HIDE);
-
-
-					if (B1.tab(x, y) == 0) {
-						T60 = _T("///");
-					}
-					else if (B1.tab(x, y) == 1) {
-						T60 = _T("X");
-						B1.cont();
-					}
-
-					break;
-				case 1:
-					//(IDC_EDIT44)->ShowWindow(SW_SHOW);
-					//(IDC_BUTTON51)->ShowWindow(SW_HIDE);
-
-
-					if (B1.tab(x, y) == 0) {
-						T61 = _T("///");
-					}
-					else if (B1.tab(x, y) == 1) {
-						T61 = _T("X");
-						B1.cont();
-					}
-					break;
-				case 2:
-					//(IDC_EDIT45)->ShowWindow(SW_SHOW);
-					//(IDC_BUTTON52)->ShowWindow(SW_HIDE);
-
-
-					if (B1.tab(x, y) == 0) {
-						T62 = _T("///");
-					}
-					else if (B1.tab(x, y) == 1) {
-						T62 = _T("X");
-						B1.cont();
-					}
-					break;
-				case 3:
-					//(IDC_EDIT46)->ShowWindow(SW_SHOW);
-					//(IDC_BUTTON53)->ShowWindow(SW_HIDE);
-
-
-					if (B1.tab(x, y) == 0) {
-						T63 = _T("///");
-					}
-					else if (B1.tab(x, y) == 1) {
-						T63 = _T("X");
-						B1.cont();
-					}
-					break;
-				case 4:
-					//(IDC_EDIT47)->ShowWindow(SW_SHOW);
-					//(IDC_BUTTON54)->ShowWindow(SW_HIDE);
-
-
-					if (B1.tab(x, y) == 0) {
-						T64 = _T("///");
-					}
-					else if (B1.tab(x, y) == 1) {
-						T64 = _T("X");
-						B1.cont();
-					}
-					break;
-				case 5:
-					//(IDC_EDIT48)->ShowWindow(SW_SHOW);
-					//(IDC_BUTTON55)->ShowWindow(SW_HIDE);
-
-
-					if (B1.tab(x, y) == 0) {
-						T65 = _T("///");
-					}
-					else if (B1.tab(x, y) == 1) {
-						T65 = _T("X");
-						B1.cont();
-					}
-					break;
-				case 6:
-					//(IDC_EDIT49)->ShowWindow(SW_SHOW);
-					//(IDC_BUTTON56)->ShowWindow(SW_HIDE);
-
-
-					if (B1.tab(x, y) == 0) {
-						T66 = _T("///");
-					}
-					else if (B1.tab(x, y) == 1) {
-						T66 = _T("X");
-						B1.cont();
-					}
-					break;
-				case 7:
-					//(IDC_EDIT122)->ShowWindow(SW_SHOW);
-					//(IDC_BUTTON57)->ShowWindow(SW_HIDE);
-
-
-					if (B1.tab(x, y) == 0) {
-						T67 = _T("///");
-					}
-					else if (B1.tab(x, y) == 1) {
-						T67 = _T("X");
-						B1.cont();
-					}
-					break;
-				default:
-					break;
-				}
-				break;
-			case 7:
-				switch (y)
-				{
-				case 0:
-
-					//(IDC_EDIT101)->ShowWindow(SW_SHOW);
-					//(IDC_BUTTON58)->ShowWindow(SW_HIDE);
-
-
-					if (B1.tab(x, y) == 0) {
-						T70 = _T("///");
-					}
-					else if (B1.tab(x, y) == 1) {
-						T70 = _T("X");
-						B1.cont();
-					}
-
-					break;
-				case 1:
-					//(IDC_EDIT102)->ShowWindow(SW_SHOW);
-					//(IDC_BUTTON59)->ShowWindow(SW_HIDE);
-
-
-					if (B1.tab(x, y) == 0) {
-						T71 = _T("///");
-					}
-					else if (B1.tab(x, y) == 1) {
-						T71 = _T("X");
-						B1.cont();
-					}
-					break;
-				case 2:
-					//(IDC_EDIT103)->ShowWindow(SW_SHOW);
-					//(IDC_BUTTON60)->ShowWindow(SW_HIDE);
-
-
-					if (B1.tab(x, y) == 0) {
-						T72 = _T("///");
-					}
-					else if (B1.tab(x, y) == 1) {
-						T72 = _T("X");
-						B1.cont();
-					}
-					break;
-				case 3:
-					//(IDC_EDIT104)->ShowWindow(SW_SHOW);
-					//(IDC_BUTTON61)->ShowWindow(SW_HIDE);
-
-
-					if (B1.tab(x, y) == 0) {
-						T73 = _T("///");
-					}
-					else if (B1.tab(x, y) == 1) {
-						T73 = _T("X");
-						B1.cont();
-					}
-					break;
-				case 4:
-					//(IDC_EDIT105)->ShowWindow(SW_SHOW);
-					//(IDC_BUTTON62)->ShowWindow(SW_HIDE);
-
-
-					if (B1.tab(x, y) == 0) {
-						T74 = _T("///");
-					}
-					else if (B1.tab(x, y) == 1) {
-						T74 = _T("X");
-						B1.cont();
-					}
-					break;
-				case 5:
-					//(IDC_EDIT106)->ShowWindow(SW_SHOW);
-					//(IDC_BUTTON63)->ShowWindow(SW_HIDE);
-
-
-					if (B1.tab(x, y) == 0) {
-						T75 = _T("///");
-					}
-					else if (B1.tab(x, y) == 1) {
-						T75 = _T("X");
-						B1.cont();
-					}
-					break;
-				case 6:
-					//(IDC_EDIT107)->ShowWindow(SW_SHOW);
-					//(IDC_BUTTON64)->ShowWindow(SW_HIDE);
-
-
-					if (B1.tab(x, y) == 0) {
-						T76 = _T("///");
-					}
-					else if (B1.tab(x, y) == 1) {
-						T76 = _T("X");
-						B1.cont();
-					}
-					break;
-				case 7:
-					//(IDC_EDIT123)->ShowWindow(SW_SHOW);
-					//(IDC_BUTTON65)->ShowWindow(SW_HIDE);
-
-
-					if (B1.tab(x, y) == 0) {
-						T77 = _T("///");
-					}
-					else if (B1.tab(x, y) == 1) {
-						T77 = _T("X");
-						B1.cont();
-					}
-					break;
-				default:
-					break;
-				}
-				break;
-			default:
-				break;
+	for (int i = 0; i < 8; i++) {
+		for (int j = 0; j < 8; j++)
+		{
+			if(P1.tab(i,j) == 0) {
+				B[i][j] = _T("");
+			}
+			else if (P1.tab(i, j) == 1) {
+				B[i][j] = _T("#");
 			}
 		}
 	}
+	UpdateData(false);
+}
+
+void CBatallaNavalCDlg::attack(int x,int y) {
+	UpdateData();
+	
+		if (P1.tab(x, y) == 0) {
+			B[x][y] = _T("///");
+		}
+		else if (P1.tab(x, y) == 1) {
+			B[x][y] = _T("X");
+		}
+		P1.setnew(x, y);
 	UpdateData(false);
 }
 

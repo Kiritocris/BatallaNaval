@@ -162,7 +162,16 @@ void Game::showtab() {
 	}
 }
 
+int Game::randompick(int x) {
+	int num;
+	srand(time(NULL));
+	num = rand() % (x+1);
+	return num;
+}
 
+void Game::setnew(int x,int y) {
+	tablero[x][y] = 2;
+}
 
 void Game::cont() {
 
@@ -171,10 +180,6 @@ void Game::cont() {
 }
 int Game::contdev() {
 
-	return contador;
-}
-
-int Game::result() {
 	return contador;
 }
 
@@ -204,11 +209,4 @@ int ransel() {
 	num = rand() % 2;
 
 	return num;
-}
-
-int valuesel(int x) {
-	if (x > 8) {
-		x = x - 2;
-	}
-	return x;
 }
